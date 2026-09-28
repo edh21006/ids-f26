@@ -547,8 +547,27 @@ Fall 2026 assignment requirements are:
 4. Preserve the complete branch history. Record the branch name, commit
    hashes and messages, and concise command results in the assignment source
    or wherever the assignment specifies.
-5. Push the branch and render the assignment before submitting the PDF through
-   the designated course workflow.
+5. Before submission, activate the same Python virtual environment that
+   successfully renders the IDS-F26 class notes. Do not create a separate
+   homework environment or install packages into a different interpreter.
+   From the assignment repository, verify the active interpreter and render
+   the source file:
+
+   ```bash
+   python -c "import sys; print(sys.executable); print(sys.version)"
+   quarto render your-homework.qmd
+   ```
+
+   Record the interpreter path, Python version, render command, and successful
+   result in the assignment source or required evidence. If the work needs a
+   package unavailable in the class-notes environment, ask the instructor
+   before adding a dependency. The grader will render the submitted source
+   with an automated script in that shared environment, so matching the
+   environment is part of the reproducibility check.
+6. Push the branch and submit the `.qmd` source plus any required input files
+   through the designated course workflow. A PDF is no longer required for
+   submission; the grader will render the source. Do not submit generated
+   output unless an assignment explicitly requests it.
 
 The ten-commit requirement applies to each assignment repository, not to the
 semester notes repository as a whole. Graded assignments remain private in
