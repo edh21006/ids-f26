@@ -4,3 +4,5 @@ Student presentations in this chapter concern statistical reasoning,
 prediction, dimension reduction, clustering, and supervised learning.
 
 Presentations will be added during the semester.
+
+- [Support Vector Machines](../topic/horan-elizabeth-svm/index.qmd)
